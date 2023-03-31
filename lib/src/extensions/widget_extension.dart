@@ -932,40 +932,40 @@ extension StyledWidget on Widget {
               transformHitTests: transformHitTests,
             );
 
-  Widget scale({
-    Key? key,
-    double? all,
-    double? x,
-    double? y,
-    Offset? origin,
-    AlignmentGeometry alignment = Alignment.center,
-    bool transformHitTests = true,
-    bool animate = false,
-  }) =>
-      animate
-          ? _StyledAnimatedBuilder(
-              key: key,
-              builder: (animation) {
-                return _AnimatedTransform(
-                  child: this,
-                  transform: Matrix4.diagonal3Values(
-                      x ?? all ?? 0, y ?? all ?? 0, 1.0),
-                  alignment: alignment,
-                  transformHitTests: transformHitTests,
-                  duration: animation.duration,
-                  curve: animation.curve,
-                );
-              },
-            )
-          : Transform(
-              key: key,
-              transform:
-                  Matrix4.diagonal3Values(x ?? all ?? 0, y ?? all ?? 0, 1.0),
-              alignment: alignment,
-              child: this,
-              origin: origin,
-              transformHitTests: transformHitTests,
-            );
+//   Widget scale({
+//     Key? key,
+//     double? all,
+//     double? x,
+//     double? y,
+//     Offset? origin,
+//     AlignmentGeometry alignment = Alignment.center,
+//     bool transformHitTests = true,
+//     bool animate = false,
+//   }) =>
+//       animate
+//           ? _StyledAnimatedBuilder(
+//               key: key,
+//               builder: (animation) {
+//                 return _AnimatedTransform(
+//                   child: this,
+//                   transform: Matrix4.diagonal3Values(
+//                       x ?? all ?? 0, y ?? all ?? 0, 1.0),
+//                   alignment: alignment,
+//                   transformHitTests: transformHitTests,
+//                   duration: animation.duration,
+//                   curve: animation.curve,
+//                 );
+//               },
+//             )
+//           : Transform(
+//               key: key,
+//               transform:
+//                   Matrix4.diagonal3Values(x ?? all ?? 0, y ?? all ?? 0, 1.0),
+//               alignment: alignment,
+//               child: this,
+//               origin: origin,
+//               transformHitTests: transformHitTests,
+//             );
 
   Widget translate({
     Key? key,
